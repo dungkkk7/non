@@ -1,73 +1,13 @@
 [
-   {
-    "id": "obfuscation",
-    "title": "Overview of Obfuscation",
-    "excerpt": "Overview of Obfuscation.",
-    "url": "posts/pdf-viewer.html?src=obfuscation_overview.pdf&title=Overview of Obfuscation",
-    "date": "2025-02-02",
-    "tags": ["pdf", "obfuscation"],
-    "format": "pdf",
-    "mins": 6,
-    "views": 0
-  },
   {
-    "id": "ransomware",
-    "title": "Ransomware",
-    "excerpt": "Overview of ransomware.",
-    "url": "posts/pdf-viewer.html?src=Ransomware.pdf&title=Ransomware",
-    "date": "2025-022-02",
-    "tags": ["pdf", "malware"],
-    "format": "pdf",
-    "mins": 6,
-    "views": 0
-  },
-  {
-    "id": "anti-disassembly",
-    "title": "Anti-Disassembly",
-    "excerpt": "Anti-disassembly techniques.",
-    "url": "posts/pdf-viewer.html?src=Anti___Disassembly.pdf&title=Anti-Disassembly",
-    "date": "2025-011-02",
-    "tags": ["pdf", "obfuscation", "asm"],
-    "format": "pdf",
-    "mins": 11,
-    "views": 640
-  },
-
-  {
-    "id": "obscuring-flow",
-    "title": "Obscuring Flow Control",
-    "excerpt": "Obscuring control flow.",
-    "url": "posts/pdf-viewer.html?src=Obscuring_Flow_Control.pdf&title=Obscuring%20Flow%20Control",
-    "date": "2025-011-02",
-    "tags": ["pdf", "obfuscation"],
-    "format": "pdf",
-    "mins": 8,
-    "views": 520
-  },
-  {
-    "id": "loader-overview",
-    "title": "Loader Overview",
-    "excerpt": "PDF version with right-side outline and progress indicator.",
-    "url": "posts/pdf-viewer.html?src=Loader_Overview.pdf&title=Loader%20Overview",
-    "date": "20244-12-02",
-    "tags": ["pdf", "loader", "reverse"],
-    "format": "pdf",
-    "mins": 7,
-    "views": 1200,
-    "pinned": true
-  },
-  {
-    "id": "loader-kill-chain",
-    "title": "Loader Cyber Kill Chain",
-    "excerpt": "PDF with outline and reading progress bar.",
-    "url": "posts/pdf-viewer.html?src=Loader_Cyber_Kill_Chain.pdf&title=Loader%20Cyber%20Kill%20Chain",
-    "date": "2025-011-02",
-    "tags": ["pdf", "loader", "analysis"],
-    "format": "pdf",
-    "mins": 9,
-    "views": 860
+    "id": "hello-world",
+    "title": "Hello World - Blog Mới",
+    "excerpt": "Bài viết giới thiệu hệ thống blog mới sử dụng Markdown.",
+    "file": "posts/hello-world.md",
+    "date": "2025-05-20",
+    "tags": ["demo", "markdown"],
+    "format": "md",
+    "mins": 2,
+    "views": 1
   }
-
 ]
-
-

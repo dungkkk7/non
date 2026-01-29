@@ -10,6 +10,22 @@ body {
   background: #151515;
 }
 
+/* Custom Thin Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f0f0f; 
+}
+::-webkit-scrollbar-thumb {
+  background: #333; 
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f3d37a; 
+}
+
 /* Sidebar */
 .layout {
   display: grid;
@@ -62,8 +78,25 @@ body {
 .license { margin: 0; }
 
 /* Content */
-.content { min-height: 100dvh; padding: 40px 56px; }
-.page { max-width: 820px; margin: 0 auto; }
+.content { 
+  min-height: 100dvh; 
+  padding: 0; /* Remove default padding from wrapper to let page handle it or be centered cleanly */
+  display: flex;
+  justify-content: center; /* Center the page */
+  background: #151515;
+}
+
+.page { 
+  max-width: 820px; 
+  width: 100%;
+  margin: 0; 
+  padding: 40px 56px; /* Move padding inside the page */
+  min-height: 100dvh; /* Full height lines */
+  border-left: 1px solid #7c7b7bff;
+  border-right: 1px solid #7c7b7bff;
+  background: #151515; /* Ensure background matches */
+  box-sizing: border-box;
+}
 .page-header { margin-bottom: 22px; }
 .page-title { font-size: 34px; margin: 4px 0 0; }
 .meta { color: #9a9a9a; font-size: 14px; }

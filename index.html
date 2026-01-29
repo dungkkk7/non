@@ -1,17 +1,23 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bùi Việt Dũng Blog</title>
-    <meta name="description" content="A simple dark blog with sidebar layout.">
-    <link rel="icon" type="image/png" href="assets/avata.png">
-    
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-  </head>
-  <body>
-    <div class="layout">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bùi Việt Dũng Blog</title>
+  <meta name="description" content="A simple dark blog with sidebar layout.">
+  <link rel="icon" type="image/png" href="assets/avata.png">
+
+  <link rel="stylesheet" href="styles.css">
+  <!-- Marked.js and Highlight.js -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <div class="layout">
     <aside class="sidebar" id="sidebar">
       <button class="menu-toggle" id="menu-toggle" aria-label="Open/close menu">
         ☰
@@ -22,13 +28,15 @@
           <a class="site-title title-prism" href="index.html">Bùi Việt Dũng</a>
           <p class="tagline">Notes on code and life.</p>
         </div>
-        <p class="bio">Hi, I'm <strong>Bùi Việt Dũng</strong> — studying <strong>Information Security</strong> at <strong>FPT University</strong>. I enjoy research and malware development.</p>
+        <p class="bio">Hi, I'm <strong>Bùi Việt Dũng</strong> — studying <strong>Information Security</strong> at
+          <strong>FPT University</strong>. I enjoy research and malware development.
+        </p>
         <ul class="bio-list">
           <li><span>Name</span>Bùi Việt Dũng</li>
           <li><span>Nationality</span>Vietnam</li>
           <li><span>Education</span>Information Assurance – FPT University</li>
-          <li><span>Role Pursuing</span>Researcher • Malware Developer</li>
-          <li><span>Interests</span>Malware, Loader, Obfuscation, Reverse</li>
+          <li><span>Role Pursuing</span>Researcher in Reverse Engineering</li>
+          <li><span>Interests</span>Malware, Loader, Obfuscation, Reverse Engineering</li>
         </ul>
         <h3 class="sidebar-heading">Skills</h3>
         <div class="chips">
@@ -80,7 +88,8 @@
           <h2 class="page-title title-prism">Latest Posts</h2>
         </header>
         <div class="post-toolbar">
-          <div class="search"><input type="search" id="post-search" placeholder="Search posts..." aria-label="Search"></div>
+          <div class="search"><input type="search" id="post-search" placeholder="Search posts..." aria-label="Search">
+          </div>
           <select id="post-sort" aria-label="Sort">
             <option value="newest">Newest</option>
             <option value="oldest">Oldest</option>
@@ -101,14 +110,14 @@
         </div>
       </article>
     </main>
-    </div>
-  </body>
-  <div class="scroll-progress" aria-hidden="true">
-    <div class="scroll-progress__track"></div>
-    <div class="scroll-progress__bar" id="scroll-progress-bar"></div>
   </div>
-  <aside class="section-map" id="section-map" aria-label="Post mini-map">
-    <div class="section-map__list" id="section-map-list"></div>
-  </aside>
-</html>
+</body>
+<div class="scroll-progress" aria-hidden="true">
+  <div class="scroll-progress__track"></div>
+  <div class="scroll-progress__bar" id="scroll-progress-bar"></div>
+</div>
+<aside class="section-map" id="section-map" aria-label="Post mini-map">
+  <div class="section-map__list" id="section-map-list"></div>
+</aside>
 
+</html>
