@@ -1,13 +1,11 @@
 [
   {
-    "id": "hello-world",
-    "title": "Hello World - Blog Mới",
-    "excerpt": "Bài viết giới thiệu hệ thống blog mới sử dụng Markdown.",
-    "file": "posts/hello-world.md",
-    "date": "2025-05-20",
-    "tags": ["demo", "markdown"],
-    "format": "md",
-    "mins": 2,
-    "views": 1
+    "id": "pymalgraph-kg-static-analysis",
+    "type": "paper",
+    "title": "PyMalGraph: Knowledge-Graph-Augmented Static Analysis",
+    "excerpt": "Draft paper PDF about knowledge-graph-augmented static malware analysis.",
+    "file": "posts/PyMalGraph Knowledge-Graph-Augmented Static Analysis.pdf",
+    "date": "2026-02-28",
+    "tags": ["paper", "static-analysis", "knowledge-graph", "malware"]
   }
 ]

@@ -4,12 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bùi Việt Dũng Blog</title>
+  <title>Bùi Việt Dũng</title>
   <meta name="description" content="A simple dark blog with sidebar layout.">
   <link rel="icon" type="image/png" href="assets/avata.png">
 
   <link rel="stylesheet" href="styles.css">
-  <!-- Marked.js and Highlight.js -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
@@ -28,23 +27,22 @@
           <a class="site-title title-prism" href="index.html">Bùi Việt Dũng</a>
           <p class="tagline">Notes on code and life.</p>
         </div>
-        <p class="bio">Hi, I'm <strong>Bùi Việt Dũng</strong> — studying <strong>Information Security</strong> at
-          <strong>FPT University</strong>. I enjoy research and malware development.
+        <p class="bio">Hi, I'm <strong>Bùi Việt Dũng</strong> — studying <strong>Information Assurance</strong> at
+          <strong>FPT University</strong>. I enjoy learning Reverse Engineering.
         </p>
         <ul class="bio-list">
           <li><span>Name</span>Bùi Việt Dũng</li>
           <li><span>Nationality</span>Vietnam</li>
           <li><span>Education</span>Information Assurance – FPT University</li>
           <li><span>Role Pursuing</span>Researcher in Reverse Engineering</li>
-          <li><span>Interests</span>Malware, Loader, Obfuscation, Reverse Engineering</li>
+          <li><span>Interests</span>Obfuscation Sofware, Protection Sofware, Reverse Engineering</li>
         </ul>
         <h3 class="sidebar-heading">Skills</h3>
         <div class="chips">
           <div class="chip">C/C++</div>
           <div class="chip">Python</div>
-          <div class="chip">x86-64</div>
-          <div class="chip">Windows</div>
-          <div class="chip">ELF/PE</div>
+          <div class="chip">Binary Analyze</div>
+          <div class="chip">Debuging</div>
         </div>
         <div class="social" aria-label="Social links">
           <a href="https://www.facebook.com/alo.alo113.anhdung" target="_blank" rel="noopener noreferrer">Facebook</a>
@@ -54,29 +52,28 @@
         <div class="sidebar-section">
           <h3 class="sidebar-heading">Work Experience</h3>
           <ul class="link-list">
+            <li><a href="#">Infomation Secuirity Employee — Viettel Network</a></li>
             <li><a href="#">Fresher SOC Tier 3 — Viettel Cyber Security</a></li>
-            <li><a href="#">Intern — Viettel Digital Talent (Cyber Security), Viettel Network</a></li>
+            <li><a href="#">Intern — Viettel Digital Talent - Cyber Security, Viettel Network</a></li>
           </ul>
         </div>
         <div class="sidebar-section">
           <h3 class="sidebar-heading">Links</h3>
           <ul class="link-list">
             <li><a href="#">CV / Résumé</a></li>
-            <li><a href="#">Project: Info Stealer , Loader and more</a></li>
-            <li><a href="#">Notes: zzzzzzz</a></li>
+            <li><a href="#">Project: Obfuscator, Info Stealer, Loader and more</a></li>
+            <li><a href="#">Notes: aka zuzaa</a></li>
           </ul>
         </div>
         <div class="sidebar-section">
           <h3 class="sidebar-heading">Popular tags</h3>
           <div class="chips">
-            <div class="chip">malware</div>
-            <div class="chip">loader</div>
             <div class="chip">obfuscation</div>
-            <div class="chip">windows</div>
+            <div class="chip">reverse engineering</div>
           </div>
         </div>
         <footer class="sidebar-footer">
-          <p class="license">© <span id="year"></span> Your Name</p>
+          <p class="license">© <span id="year"></span> Zuzaa</p>
         </footer>
       </div>
     </aside>
@@ -84,7 +81,7 @@
     <main class="content">
       <article class="page">
         <header class="page-header">
-          <p class="meta">2025-09-02 · 2 posts</p>
+          <p class="meta" id="home-meta">Loading posts...</p>
           <h2 class="page-title title-prism">Latest Posts</h2>
         </header>
         <div class="post-toolbar">
@@ -98,10 +95,8 @@
         </div>
         <div class="post-tabs" id="post-tabs" role="tablist">
           <button class="post-tab active" data-filter="all" role="tab">All</button>
-          <button class="post-tab" data-filter="pdf" role="tab">PDF</button>
-          <button class="post-tab" data-filter="ctf" role="tab">CTF</button>
-          <button class="post-tab" data-filter="research" role="tab">Research</button>
-          <button class="post-tab" data-filter="notes" role="tab">Notes</button>
+          <button class="post-tab" data-filter="paper" role="tab">Paper</button>
+          <button class="post-tab" data-filter="post" role="tab">Post</button>
         </div>
         <div class="posts" id="posts" aria-live="polite"></div>
         <div class="pager" id="pager" aria-label="Pagination">

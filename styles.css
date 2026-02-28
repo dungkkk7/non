@@ -178,6 +178,7 @@ code { background: #1d1d1d; padding: 2px 6px; border-radius: 6px; font-family: '
 .pdf-viewer { height: 100vh; overflow: auto; border: 0; border-radius: 0; background: #0f0f0f; }
 .pdf-viewer #viewer { position: relative; padding: 0; display: block; }
 .pdf-page { display: block; margin: 0 0 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.35); background: #111; width: 100%; }
+.post-paper-frame { width: 100%; min-height: 80vh; border: 2px solid #2b2b2b; border-radius: 2px; background: #111; }
 
 @media (max-width: 1200px) {
   .pdf-layout { grid-template-columns: 1fr; }
@@ -271,4 +272,3 @@ body.has-section-map .scroll-progress { right: 160px; }
   border-radius: 2px;
   transform: skewX(-10deg);
 }
-
