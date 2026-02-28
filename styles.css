@@ -178,7 +178,42 @@ code { background: #1d1d1d; padding: 2px 6px; border-radius: 6px; font-family: '
 .pdf-viewer { height: 100vh; overflow: auto; border: 0; border-radius: 0; background: #0f0f0f; }
 .pdf-viewer #viewer { position: relative; padding: 0; display: block; }
 .pdf-page { display: block; margin: 0 0 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.35); background: #111; width: 100%; }
-.post-paper-frame { width: 100%; min-height: 80vh; border: 2px solid #2b2b2b; border-radius: 2px; background: #111; }
+.post-header-detail { margin-bottom: 1.6rem; border-bottom: 1px solid #333; padding-bottom: 1rem; }
+.post-title-detail {
+  margin: 0 0 .55rem;
+  color: #f3d37a;
+  line-height: 1.2;
+  font-size: clamp(1.8rem, 3vw, 2.35rem);
+  word-break: break-word;
+}
+.post-actions { margin-bottom: .7rem; }
+.post-back-button { cursor: pointer; }
+.paper-actions { margin-bottom: .6rem; }
+.paper-actions-minimal { display: flex; align-items: center; }
+.paper-open-link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 1px solid #2b2b2b;
+  border-radius: 2px;
+  background: #141414;
+  color: #f3d37a;
+}
+.paper-open-link:hover { background: #1b1b1b; border-color: #3a3a3a; }
+.post-paper-frame { width: 100%; min-height: 84vh; border: 2px solid #2b2b2b; border-radius: 2px; background: #111; }
+.page.paper-focus {
+  padding: 14px 0 0;
+}
+.page.paper-focus .post-actions,
+.page.paper-focus .paper-actions-minimal {
+  padding: 0 14px;
+}
+.page.paper-focus .post-paper-frame {
+  min-height: calc(100dvh - 92px);
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
 
 @media (max-width: 1200px) {
   .pdf-layout { grid-template-columns: 1fr; }
@@ -251,6 +286,10 @@ body.has-section-map .scroll-progress { right: 160px; }
   .nav { display: none; }
   .menu-toggle { display: inline-flex; position: absolute; right: 10px; top: 10px; background: #1d1d1d; color: #f3d37a; border: 1px solid #333; padding: 6px 10px; border-radius: 6px; }
   .content { padding: 84px 18px 28px; }
+  .page.paper-focus { padding-top: 10px; }
+  .page.paper-focus .post-actions,
+  .page.paper-focus .paper-actions-minimal { padding: 0 10px; }
+  .page.paper-focus .post-paper-frame { min-height: calc(100dvh - 120px); }
 }
 
 /* Mobile menu expanded */

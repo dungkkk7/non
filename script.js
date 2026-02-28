@@ -63,8 +63,8 @@
     postViewContainer.id = 'post-view-container';
     postViewContainer.style.display = 'none';
     postViewContainer.innerHTML = `
-      <div class="post-actions" style="margin-bottom: 2rem;">
-        <button id="back-button" class="post-tab" style="cursor:pointer;" type="button">← Back to Posts</button>
+      <div class="post-actions">
+        <button id="back-button" class="post-tab post-back-button" type="button">← Back to Posts</button>
       </div>
       <div id="post-content-area" class="post-content markdown-body"></div>
     `;
@@ -130,6 +130,7 @@
 
     listElements.forEach((el) => { if (el) el.style.display = ''; });
     if (postViewContainer) postViewContainer.style.display = 'none';
+    if (articlePage) articlePage.classList.remove('paper-focus');
 
     applyFilters();
     window.scrollTo(0, 0);
@@ -151,13 +152,8 @@
     }
 
     contentArea.innerHTML = `
-      <header class="post-header-detail" style="margin-bottom:2rem; border-bottom:1px solid #333; padding-bottom:1rem;">
-        <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem; color: #f3d37a;">${escapeHtml(post.title)}</h1>
-        <div class="meta">${escapeHtml(post.date)} • Paper</div>
-        <p style="color:#cfcfcf; margin-top:.8rem;">${escapeHtml(post.excerpt || '')}</p>
-      </header>
-      <div style="margin-bottom: 1rem;">
-        <a href="${escapeHtml(filePath)}" target="_blank" rel="noopener noreferrer">Open PDF in new tab</a>
+      <div class="paper-actions paper-actions-minimal">
+        <a class="paper-open-link" href="${escapeHtml(filePath)}" target="_blank" rel="noopener noreferrer">Open PDF</a>
       </div>
       <iframe class="post-paper-frame" src="${escapeHtml(filePath)}#view=FitH" title="${escapeHtml(post.title)}"></iframe>
     `;
@@ -178,8 +174,8 @@
 
       const html = marked.parse(md);
       contentArea.innerHTML = `
-        <header class="post-header-detail" style="margin-bottom:2rem; border-bottom:1px solid #333; padding-bottom:1rem;">
-          <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem; color: #f3d37a;">${escapeHtml(post.title)}</h1>
+        <header class="post-header-detail">
+          <h1 class="post-title-detail">${escapeHtml(post.title)}</h1>
           <div class="meta">${escapeHtml(post.date)} • ${post.mins || 5} min read</div>
         </header>
         <div>
@@ -205,12 +201,15 @@
 
     if (!post) {
       contentArea.innerHTML = '<p>Post not found.</p>';
+      if (articlePage) articlePage.classList.remove('paper-focus');
       return;
     }
 
     if (post.type === 'paper') {
+      if (articlePage) articlePage.classList.add('paper-focus');
       renderPaperPost(post, contentArea);
     } else {
+      if (articlePage) articlePage.classList.remove('paper-focus');
       await renderBlogPost(post, contentArea);
     }
 
