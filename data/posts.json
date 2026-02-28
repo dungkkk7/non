@@ -2,7 +2,7 @@
   {
     "id": "pymalgraph-kg-static-analysis",
     "type": "paper",
-    "title": "PyMalGraph: KG-Augmented Static Analysis",
+    "title": "PyMalGraph: Knowledge-Graph-Augmented Static Analysis for Malicious Python Package Detection",
     "excerpt": "Draft PDF on static malware analysis for malicious Python packages using a knowledge graph.",
     "file": "posts/PyMalGraph Knowledge-Graph-Augmented Static Analysis.pdf",
     "date": "2025-02-8",
