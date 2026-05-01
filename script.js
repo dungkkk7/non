@@ -4,9 +4,21 @@
 
   const toggle = document.getElementById('menu-toggle');
   const sidebar = document.getElementById('sidebar');
+  const drawer = document.getElementById('sidebar-drawer');
+
+  // On desktop, drawer is always visible via CSS (not hidden)
+  // On mobile, toggle open class on sidebar to show drawer
   if (toggle && sidebar) {
     toggle.addEventListener('click', () => {
       sidebar.classList.toggle('open');
+    });
+    // Close drawer when clicking outside on mobile
+    document.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768 && sidebar.classList.contains('open')) {
+        if (!sidebar.contains(e.target)) {
+          sidebar.classList.remove('open');
+        }
+      }
     });
   }
 
@@ -263,7 +275,9 @@
       showPost(p.id);
     });
 
-    const badge = `<span class="badge">${p.type === 'paper' ? 'PAPER' : 'BLOG'}</span>`;
+    const badge = p.type === 'paper'
+      ? `<span class="badge badge-paper">PAPER</span>`
+      : `<span class="badge">BLOG</span>`;
     const chips = (p.tags || [])
       .slice(0, 4)
       .map((t) => `<button class="post-chip" data-tag="${escapeHtml(t)}" type="button">${escapeHtml(t)}</button>`)
